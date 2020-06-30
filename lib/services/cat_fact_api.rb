@@ -8,6 +8,5 @@ class CatFactAPI
     cat_facts["all"].each do |cat_fact_hash|
       CatFact.new(cat_fact_hash["text"], cat_fact_hash["upvotes"])
     end
-
   end
 end

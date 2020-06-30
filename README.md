@@ -32,7 +32,7 @@ https://github.com/public-apis/public-apis
 
 Web scraping means
 
-### Some tool:
+### A scraping tool:
 
 - nokogiri
 
@@ -41,3 +41,8 @@ Web scraping means
 Now we will:
 - build a model class and use API consumption to build a bunch of objects
 - build a model class and use scraping to build a bunch of objects
+
+## Notes
+
+In computer programming, remember functions are reusable chunks of code that can be called (invoked, executed).
+Methods are functions that belong to an object, and are called on that object.  When we call a method on an object, the object is called the receiving object, or receiver.

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+# start my program
+new_cli_instance = CLI.new # class method .new - creates a new instance of CLI
+new_cli_instance.run # instance method #run called on that brand new CLI instance
