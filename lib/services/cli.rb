@@ -12,7 +12,7 @@ class CLI
     welcome
     # get all the things -- or enough things to get started
     CatFactAPI.new.get_cat_facts
-    CatFact.top_ten
+    
     # or get enough user input to ^^
     # show some kind of menu
     main_menu
