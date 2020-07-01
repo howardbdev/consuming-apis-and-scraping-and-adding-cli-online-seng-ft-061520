@@ -12,6 +12,7 @@ class CLI
     welcome
     # get all the things -- or enough things to get started
     CatFactAPI.new.get_cat_facts
+    CatFact.top_ten
     # or get enough user input to ^^
     # show some kind of menu
     main_menu
@@ -37,7 +38,8 @@ class CLI
       if input.length > 1
         puts "Invalid choice.  Please try again."
       elsif input == 'm'
-        # run most upvoted
+        # run most upvoted - get the top 10
+        print_top_ten
       elsif input == 'a'
         print_all_cat_facts
       end
@@ -55,10 +57,21 @@ class CLI
   end
 
   def print_all_cat_facts
-    # this is a violation of SRP! (SRP = Single Responsibility Principle)
     CatFact.all.each do |cat_fact|
       puts ""
       puts cat_fact.text
+      puts "this fact had #{cat_fact.upvotes} upvotes"
+      puts ""
+    end
+    nil
+  end
+
+  # This is not DRY!  it's too much like #print_all_cat_facts!  How could we DRY it up?
+  def print_top_ten
+    CatFact.top_ten.each do |cat_fact|
+      puts ""
+      puts cat_fact.text
+      puts "this fact had #{cat_fact.upvotes} upvotes"
       puts ""
     end
     nil

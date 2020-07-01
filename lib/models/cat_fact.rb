@@ -13,4 +13,8 @@ class CatFact
     @@all
   end
 
+  def self.top_ten
+    all.sort {|a, b| b.upvotes <=> a.upvotes }[0..9]
+  end
+
 end
